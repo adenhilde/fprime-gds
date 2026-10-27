@@ -1,0 +1,12 @@
+mkdir files logs
+
+. venv/bin/activate
+
+# dont forget to set the <pi-ip> argument manually
+
+fprime-gds -n \
+  --dictionary CDHDeploymentTopologyDictionary.json \
+  --framing-selection fprime \
+  --ip-client --ip-address <pi-ip> --ip-port 50000 \
+  --file-storage-directory "$PWD/files" \
+  --logs "$PWD/logs"
